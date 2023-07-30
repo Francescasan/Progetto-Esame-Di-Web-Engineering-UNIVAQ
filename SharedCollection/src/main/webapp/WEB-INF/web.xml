@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <param-name>images.directory</param-name>
+        <!-- Tomcat must have write permissions on this folder -->
+        <param-value>images</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.outline_template</param-name>
+        <param-value>index.html.ftl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.date_format</param-name>
+        <param-value>dd/MM/yyyy hh:mm:ss</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.debug</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.template_directory</param-name>
+        <param-value>templates</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.data.author</param-name>
+        <param-value>FRED</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.data.homepage_url</param-name>
+        <param-value>homepage</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.error_template</param-name>
+        <param-value>error.html.ftl</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Home</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Registrazione</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Registrazione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Mostra Utenti</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.MostraUtenti</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Profilo utente</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ProfiloUtente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Collezioni</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Collezioni</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Collezione</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ViewCollezione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Nuova collezione</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.NuovaCollezione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Modifica collezione</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ModificaCollezione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Modifica condivisione</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ModificaCondivisione</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Disco</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.InfoDisco</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>confermaEmail</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ConfimEmail</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Modifica Disco</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ModificaDisco</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Importa Disco</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.ImportaDisco</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Nuovo Artista</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.NuovoArtista</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Ricerca</servlet-name>
+        <servlet-class>it.fdd.sharedcollection.controller.Ricerca</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registrazione</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Mostra Utenti</servlet-name>
+        <url-pattern>/showUtenti</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profilo utente</servlet-name>
+        <url-pattern>/utente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Collezioni</servlet-name>
+        <url-pattern>/collezioni</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Collezione</servlet-name>
+        <url-pattern>/collezione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Nuova collezione</servlet-name>
+        <url-pattern>/newCollezione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Modifica collezione</servlet-name>
+        <url-pattern>/modificaCollezione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Modifica condivisione</servlet-name>
+        <url-pattern>/modificaCondivisione</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>confermaEmail</servlet-name>
+        <url-pattern>/confermaEmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Disco</servlet-name>
+        <url-pattern>/disco</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Modifica Disco</servlet-name>
+        <url-pattern>/modificaDisco</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Importa Disco</servlet-name>
+        <url-pattern>/importaDisco</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Nuovo Artista</servlet-name>
+        <url-pattern>/newArtista</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ricerca</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+    <resource-ref>
+        <res-ref-name>jdbc/webdb2</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>
+
